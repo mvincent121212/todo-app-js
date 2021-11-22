@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #fafafa !important;
+    color: #202020;
+}
+
+h1 {
+    text-align: center;
+    color: #202020;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    cursor: pointer;
+}
+
+.container {
+    list-style-type: none;
+    width: 50% !important;
+}
+
+li {
+    background-color: #2A2A72;
+    height: 10em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-shadow: 5px 10px #202020;
+}
+
+
+button {
+    padding: 20px;
+    border: none;
+    background: none;
+}
+
+li span {
+    font-size: 1.5em;
+    width: 75%;
+    color: #faf9f6;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.fa-plus-square {
+    font-size: 2em;
+    color: #2A2A72;
+}
+
+.submit-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list-item {
+    transition: all 0.3s ease-out;
+}
+
+.toDoList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.todo-list-fall {
+    transform: translateY(12rem) rotateZ('10deg');
+    opacity: 0;
+}
+
+.fa-trash {
+    cursor: pointer;
+    position: absolute;
+    font-size: 2em;
+    right: 20px;
+    top: 68px;
+    color: #EAF6FF;
+}
+
+.fa-check {
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    font-size: 2em;
+    top: 68px;
+    color: #EAF6FF;
+
+}
+
+.draggable {
+    cursor: grab;
+}
+
+.draggable.dragging {
+    opacity: .5;
+}
+
+#clearAll {
+    border-color: #2A2A72;
+    opacity: 0.6;
+    width: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .container {
+        width: 75% !important;
+    }
+    li span {
+        width:75%;
+        font-size: 1em;
+        overflow: hidden;
+    }
+
+    .fa-check, .fa-trash {
+        font-size: 1.5em;
+    }
+
+    .fa-check {
+        right: 50px;
+    }
+    
+}
+
+
+
+
+
+
