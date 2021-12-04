@@ -42,6 +42,8 @@ li {
 }
 
 
+
+
 button {
     padding: 20px;
     border: none;
@@ -90,23 +92,25 @@ li span {
     opacity: 0;
 }
 
+.buttons {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+
 .fa-trash {
-    cursor: pointer;
-    position: absolute;
-    font-size: 2em;
-    right: 20px;
-    top: 68px;
+    font-size: 1.5em;
     color: #EAF6FF;
 }
 
 .fa-check {
-    cursor: pointer;
-    position: absolute;
-    right: 100px;
-    font-size: 2em;
-    top: 68px;
+    font-size: 1.5em;
     color: #EAF6FF;
 
+}
+
+path {
+    pointer-events: none;
 }
 
 .draggable {
@@ -134,7 +138,7 @@ li span {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
 
     .container {
         width: 75% !important;
@@ -146,7 +150,7 @@ li span {
     }
 
     .fa-check, .fa-trash {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .fa-check {

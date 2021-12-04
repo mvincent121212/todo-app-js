@@ -11,7 +11,6 @@ const handleSubmitForm = (e) => {
 }
 
 const handleClickCheckOrDelete = (e) => {
-    //e.stopPropagation();
     if (e.target.getAttribute('name') == 'fa-check') {
         checkToDo(e);
     }
@@ -47,12 +46,15 @@ const checkToDo = (e) => {
     let itemButton = e.target.parentNode;
     let buttons = itemButton.parentNode;
     let item = buttons.parentNode;
+    console.log(item);
 
-    if (item.style.textDecoration == 'line-through') {
+    if (item.style.textDecoration == 'line-through 10px red') {
         item.style.textDecoration = 'none';
     }
     else {
         item.style.textDecoration = 'line-through';
+        item.style.textDecorationThickness = '10px';
+        item.style.textDecorationColor = 'red';
     }
 }
 
@@ -72,7 +74,7 @@ const deleteToDo = (e) => {
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
-document.querySelector('ul').addEventListener('click', handleClickCheckOrDelete);
+console.log(document.querySelector('ul').addEventListener('click', handleClickCheckOrDelete));
 document.getElementById('clearAll').addEventListener('click', handleClearList);
 
 const dragAndDropListElements = () => {  
@@ -92,7 +94,7 @@ const dragAndDropListElements = () => {
     containers.forEach(container => {
         container.addEventListener('dragover', e => {
             e.preventDefault();
-            e.stopPropagation();
+            // e.stopPropagation();
             const afterElement = getDragAfterElement(container, e.clientY);
             const currentlyDraggable = document.querySelector('.dragging');
             if (afterElement == null) {
